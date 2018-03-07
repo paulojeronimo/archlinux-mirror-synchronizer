@@ -1,0 +1,17 @@
+#!/bin/bash
+set +x
+
+BASE_DIR=`cd "$(dirname "$0")"; pwd`
+source "$BASE_DIR/config"
+
+mkdir -p "$MIRROR_DIR" && cd $_
+
+_rsync() {
+  mkdir -p $1
+  rsync -avzy --delete-after --progress $MIRROR_BASE_URL/$1/ $1/
+}
+
+_rsync pool
+_rsync core/os/x86_64
+_rsync extra/os/x86_64
+_rsync community/os/x86_64

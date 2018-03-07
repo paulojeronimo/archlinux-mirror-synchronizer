@@ -1,0 +1,11 @@
+#!/bin/bash
+set +x
+
+# Mirror provided by the Department of Computer Science and Enginnering of Tecnico Lisboa
+MIRROR_BASE_URL=rsync://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux
+
+# Local mirror directory
+MIRROR_DIR=$BASE_DIR/mirror
+
+# HTTP server port used locally to serve the mirror contents
+HTTP_SERVER_PORT=8000

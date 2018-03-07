@@ -1,0 +1,19 @@
+= Arch Linux local mirror synchronizer
+:icons: font
+
+This project can be used to locally synchronize an https://www.archlinux.org/[Arch Linux] remote mirror.
+
+The mirror will be synchronized with `$MIRROR_BASE_URL` (see link:config[] file) by calling the link:sync[] script.
+
+The local copy of the mirror will be downloaded in `$MIRROR_BASE_DIR`.
+This copy can be HTTP served locally by running the link:serve[] script.
+The HTTP server port used by this script is configured in `$HTTP_SERVER_PORT`.
+
+[WARNING]
+.Downloaded mirror size after `sync` (aproximately, on 2018 March):
+====
+----
+$ du -hs mirror/
+ 34G	mirror/
+----
+====
