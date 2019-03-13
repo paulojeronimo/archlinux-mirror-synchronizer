@@ -1,8 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set +x
 
 # Mirror provided by the Department of Computer Science and Enginnering of Tecnico Lisboa
 MIRROR_BASE_URL=rsync://ftp.rnl.tecnico.ulisboa.pt/pub/archlinux
+
+#MIRROR_BASE_URL=rsync://arch.mirror.constant.com/archlinux/
 
 # Local mirror directory
 MIRROR_DIR=$BASE_DIR/mirror
