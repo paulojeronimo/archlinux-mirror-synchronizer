@@ -34,6 +34,13 @@ $ du -hs mirror/
 ----
 ====
 
+[NOTE]
+.Proxy settings:
+====
+If you are behind a proxy you may need to configure the `RSYNC_PROXY` variable before using the `sync` script.
+Example: `$ export RSYNC_PROXY=user:password@proxy_host:proxy_port`
+====
+
 == References
 
 . https://www.archlinux.org/mirrorlist/
